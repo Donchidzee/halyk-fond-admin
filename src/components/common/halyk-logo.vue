@@ -2,7 +2,7 @@
   <div>
     <img
       class="logo-image"
-      src="@/assets/images/halyk-logo.svg"
+      src="@/assets/images/halyk-fond-logo.svg"
       alt="halyk_logo"
     />
   </div>
@@ -16,6 +16,7 @@ export default {};
 .logo {
   &-image {
     width: 100%;
+    opacity: 0.8;
   }
 }
 </style>
