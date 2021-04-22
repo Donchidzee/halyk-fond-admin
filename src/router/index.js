@@ -1,14 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Register from "../views/register/halyk-register.vue";
+import Login from "../views/login/halyk-login.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "register",
-    component: Register,
+    name: "login",
+    component: Login,
   },
 ];
 

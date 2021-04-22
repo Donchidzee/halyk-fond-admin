@@ -3,7 +3,7 @@
     <logo class="register-logo" />
     <form action="" class="register-form">
       <p class="register-title">Добро пожаловать</p>
-      <h3 class="register-subtitle">Создайте аккаунт</h3>
+      <h3 class="register-subtitle">Войдите в аккаунт</h3>
       <halyk-input
         class="register-input"
         type="email"
@@ -14,9 +14,9 @@
         class="register-input"
         type="password"
         title="Пароль"
-        placeholder="Придумайте пароль"
+        placeholder="Введите пароль"
       />
-      <button class="register-button" type="submit">Зарегестрироваться</button>
+      <button class="register-button" type="submit">Войти</button>
     </form>
   </div>
 </template>
