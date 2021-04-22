@@ -1,13 +1,13 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Register from '../views/register/halyk-register.vue';
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Register from "../views/register/halyk-register.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'register',
+    path: "/",
+    name: "register",
     component: Register,
   },
 ];

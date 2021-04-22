@@ -22,7 +22,7 @@ export default {
     },
     type: {
       type: String,
-      default: 'text',
+      default: "text",
     },
     placeholder: {
       type: String,
@@ -49,7 +49,7 @@ export default {
 
   methods: {
     updateValue(value) {
-      this.$emit('input', value);
+      this.$emit("input", value);
     },
   },
 };
