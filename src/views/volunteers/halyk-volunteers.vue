@@ -10,8 +10,8 @@
         <span class="volunteers-button-text">Добавить</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="20"
+          height="20"
           viewBox="0 0 24 24"
           style="fill: #ffffff; transform: ; -ms-filter: "
         >
@@ -103,15 +103,16 @@ export default {
   width: 100%;
 
   &-container {
-    margin-top: 15px;
+    margin-top: 25px;
     display: flex;
-    justify-content: space-between;
     width: 100%;
+    align-items: flex-end;
   }
 
   &-title {
     font-size: 30px;
     opacity: 0.7;
+    margin-right: 30px;
 
     &-span {
       font-size: 18px;
@@ -138,20 +139,21 @@ export default {
   }
 
   &-button {
-    padding: 8px 20px;
+    padding: 5px 10px;
     border: 1px solid $primary;
     color: #ffffff;
     background-color: $primary;
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 16px;
-    border-radius: 10px;
+    font-size: 13px;
+    border-radius: 5px;
     cursor: pointer;
     transition: 200ms ease-in-out;
 
     &-text {
       margin-right: 10px;
+      margin-bottom: 2px;
     }
 
     &-delete {
