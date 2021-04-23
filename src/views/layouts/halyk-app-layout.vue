@@ -11,22 +11,22 @@
 import sidebar from "@/components/common/halyk-sidebar";
 export default {
   components: {
-    sidebar
-  }
-}
+    sidebar,
+  },
+};
 </script>
 
 <style scoped lang="scss">
 @import "@/assets/styles/variables.scss";
 
 .app-page {
-    background-color: $background;
-    height: 100vh;
-    width: 100%;
-    
-    &-content {
-        margin-left: 300px;
-        width: calc(100% - 300px);
-    }
+  background-color: $background;
+  height: 100vh;
+  width: 100%;
+
+  &-content {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+  }
 }
 </style>

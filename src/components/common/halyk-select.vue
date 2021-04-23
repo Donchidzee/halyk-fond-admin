@@ -2,7 +2,20 @@
   <div class="select" @focusout="handleFocusOut" tabindex="0">
     <div class="select-title">{{ title }}</div>
     <div class="select-inner" @click="handleSelectClick">
-      {{ optionValue }} <div class="select-down-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></div>
+      {{ optionValue }}
+      <div class="select-down-arrow">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+        >
+          <path
+            d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"
+          ></path>
+        </svg>
+      </div>
     </div>
     <div class="select-options" v-if="isOptionsOpen">
       <div
@@ -21,16 +34,16 @@
 export default {
   props: {
     options: {
-      type: Array
+      type: Array,
     },
     title: {
-      type: String
-    }
+      type: String,
+    },
   },
   data() {
     return {
       isOptionsOpen: false,
-      optionValue: ""
+      optionValue: "",
     };
   },
   methods: {
@@ -48,11 +61,11 @@ export default {
     },
     handleFocusOut() {
       this.isOptionsOpen = false;
-    }
+    },
   },
   mounted() {
     this.optionValue = this.options[0];
-  }
+  },
 };
 </script>
 

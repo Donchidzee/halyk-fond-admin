@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Login from "../views/login/halyk-login.vue";
 import AppLayout from "../views/layouts/halyk-app-layout.vue";
 import Questionnaire from "../views/questionnaire/halyk-questionnaire.vue";
+import Volunteers from "../views/volunteers/halyk-volunteers.vue";
 
 Vue.use(VueRouter);
 
@@ -20,8 +21,13 @@ const routes = [
         path: "questionnaire",
         name: "questionnaire",
         component: Questionnaire,
-      }
-    ]
+      },
+      {
+        path: "volunteers",
+        name: "volunteers",
+        component: Volunteers,
+      },
+    ],
   },
 ];
 

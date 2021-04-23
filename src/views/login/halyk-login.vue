@@ -33,8 +33,8 @@ export default {
   methods: {
     login() {
       this.$router.push("/app/questionnaire");
-    }
-  }
+    },
+  },
 };
 </script>
 

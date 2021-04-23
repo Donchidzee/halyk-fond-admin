@@ -10,11 +10,11 @@
       </div>
       <div class="questionnaire-filters">
         <halykSelect
-            :options="searchOptions"
-            @option-changed="searchOptionChanged"
-            title="Волонтеры"
+          :options="searchOptions"
+          @option-changed="searchOptionChanged"
+          title="Волонтеры"
         />
-      </div>      
+      </div>
     </div>
     <table class="questionnaire-table" cellspacing="0">
       <tr class="questionnaire-row">
@@ -44,7 +44,7 @@ import halykSelect from "@/components/common/halyk-select";
 export default {
   components: {
     halykHeader,
-    halykSelect
+    halykSelect,
   },
   data() {
     return {
@@ -128,14 +128,14 @@ export default {
           respondentNumber: "8(747)-123-32-23",
         },
       ],
-      searchOptions: ["Алмаз", "Айдар", "Айбек"]
+      searchOptions: ["Алмаз", "Айдар", "Айбек"],
     };
   },
   methods: {
     searchOptionChanged(option) {
-        console.log(option)
-    }
-  }
+      console.log(option);
+    },
+  },
 };
 </script>
 
@@ -152,7 +152,7 @@ export default {
   }
 
   &-filters {
-      margin-top: 30px;
+    margin-top: 30px;
   }
 
   &-title {
@@ -188,6 +188,7 @@ export default {
     text-align: left;
     padding: 15px 15px;
     border-bottom: 1px solid #f5b03350;
+    box-sizing: border-box;
   }
 }
 </style>

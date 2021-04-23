@@ -4,7 +4,7 @@
       <logo class="sidebar-logo" />
       <div class="dividing-line"></div>
       <div class="navigation-links">
-        <div class="link" to="/app/questionnaire">
+        <router-link class="link" to="/app/questionnaire">
           <div class="link-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +20,8 @@
             </svg>
           </div>
           <span class="link-text">Анкеты</span>
-        </div>
-        <div class="link link-active" to="/app/questionnaire">
+        </router-link>
+        <router-link class="link link-active" to="/app/volunteers">
           <div class="link-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@
             </svg>
           </div>
           <span class="link-text">Волонтеры</span>
-        </div>
+        </router-link>
       </div>
     </div>
     <div class="content-half">
