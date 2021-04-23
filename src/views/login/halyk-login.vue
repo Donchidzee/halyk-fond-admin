@@ -1,7 +1,7 @@
 <template>
   <div class="register">
     <logo class="register-logo" />
-    <form action="" class="register-form">
+    <form action="" @submit.prevent="login" class="register-form">
       <p class="register-title">Добро пожаловать</p>
       <h3 class="register-subtitle">Войдите в аккаунт</h3>
       <halyk-input
@@ -30,6 +30,11 @@ export default {
     "halyk-input": halykInput,
     logo,
   },
+  methods: {
+    login() {
+      this.$router.push("/app/questionnaire");
+    }
+  }
 };
 </script>
 
@@ -91,6 +96,7 @@ export default {
     margin-top: 30px;
     cursor: pointer;
     transition: 200ms ease-in-out;
+    outline: none;
   }
 
   &-button:hover {
