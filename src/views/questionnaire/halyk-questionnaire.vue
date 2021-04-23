@@ -2,7 +2,19 @@
   <div class="questionnaire">
     <halykHeader />
     <div class="questionnaire-container">
-      <div class="questionnaire-title">Анкеты <span class="questionnaire-title-span">{{ questionnaires.length }}</span></div>
+      <div class="questionnaire-title">
+        Анкеты
+        <span class="questionnaire-title-span">{{
+          questionnaires.length
+        }}</span>
+      </div>
+      <div class="questionnaire-filters">
+        <halykSelect
+            :options="searchOptions"
+            @option-changed="searchOptionChanged"
+            title="Волонтеры"
+        />
+      </div>      
     </div>
     <table class="questionnaire-table" cellspacing="0">
       <tr class="questionnaire-row">
@@ -11,7 +23,11 @@
         <th class="questionnaire-cell questionnaire-head">ФИ респондента</th>
         <th class="questionnaire-cell questionnaire-head">Номер респондента</th>
       </tr>
-      <tr class="questionnaire-data" v-for="(questionnaire, index) in questionnaires" :key="questionnaire.id">
+      <tr
+        class="questionnaire-data"
+        v-for="(questionnaire, index) in questionnaires"
+        :key="questionnaire.id"
+      >
         <td class="questionnaire-cell">{{ index + 1 }}</td>
         <td class="questionnaire-cell">{{ questionnaire.voluteerName }}</td>
         <td class="questionnaire-cell">{{ questionnaire.respondentName }}</td>
@@ -23,93 +39,101 @@
 
 <script>
 import halykHeader from "@/components/common/halyk-header";
+import halykSelect from "@/components/common/halyk-select";
 
 export default {
   components: {
     halykHeader,
+    halykSelect
   },
   data() {
     return {
-        questionnaires: [
-            {
-                id: 0,
-                voluteerName: "Almaz",
-                respondentName: "Игорь",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 1,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 2,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 3,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 4,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 5,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 6,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 7,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 8,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 9,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 10,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 11,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            },
-            {
-                id: 12,
-                voluteerName: "Almaz",
-                respondentName: "Жайнар",
-                respondentNumber: "8(747)-123-32-23"
-            }
-        ]
+      questionnaires: [
+        {
+          id: 0,
+          voluteerName: "Almaz",
+          respondentName: "Игорь",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 1,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 2,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 3,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 4,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 5,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 6,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 7,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 8,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 9,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 10,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 11,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+        {
+          id: 12,
+          voluteerName: "Almaz",
+          respondentName: "Жайнар",
+          respondentNumber: "8(747)-123-32-23",
+        },
+      ],
+      searchOptions: ["Алмаз", "Айдар", "Айбек"]
+    };
+  },
+  methods: {
+    searchOptionChanged(option) {
+        console.log(option)
     }
   }
 };
@@ -124,8 +148,11 @@ export default {
   box-sizing: border-box;
 
   &-container {
-    display: flex;
-    margin-top: 10px;
+    margin-top: 15px;
+  }
+
+  &-filters {
+      margin-top: 30px;
   }
 
   &-title {
@@ -133,14 +160,14 @@ export default {
     opacity: 0.7;
 
     &-span {
-        font-size: 18px;
-        opacity: 0.6;
+      font-size: 18px;
+      opacity: 0.6;
     }
   }
 
   &-table {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 25px;
     opacity: 0.8;
     color: $dark;
   }

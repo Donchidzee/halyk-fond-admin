@@ -22,8 +22,11 @@ export default {
     align-items: center;
 
     &-text {
-        color: $primary;
+        color: #ffffff;
         user-select: none;
+        padding: 8px 20px;
+        background-color: $yellow;
+        border-radius: 10px;
     }
 
     &-icon {
