@@ -150,6 +150,7 @@ export default {
     border-radius: 5px;
     cursor: pointer;
     transition: 200ms ease-in-out;
+    outline: none;
 
     &-text {
       margin-right: 10px;
@@ -161,6 +162,7 @@ export default {
       border: 0;
       cursor: pointer;
       transition: 200ms ease-in-out;
+      outline: none;
     }
 
     &-delete:hover {
